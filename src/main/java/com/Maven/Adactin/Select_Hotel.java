@@ -1,0 +1,31 @@
+package com.Maven.Adactin;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class Select_Hotel {
+	
+	public WebDriver driver;
+	@FindBy(id = "radiobutton_0")
+	private WebElement selectradio;
+
+	@FindBy(id = "continue")
+	private WebElement continuebtn;
+
+	public Select_Hotel(WebDriver driver2) {
+		// TODO Auto-generated constructor stub
+		this.driver=driver2;
+		PageFactory.initElements(driver, this);
+	}
+
+	public WebElement getSelectradio() {
+		return selectradio;
+	}
+
+	public WebElement getContinuebtn() {
+		return continuebtn;
+	}
+
+}
